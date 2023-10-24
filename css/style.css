@@ -1,136 +1,208 @@
-*{
+/* Reset básico para algunos navegadores */
+* {
     margin: 0;
-    border: 0;
+    padding: 0;
     box-sizing: border-box;
+}
+
+.main-content {
+    max-width: 1100px; /* Puedes ajustar este valor según tus preferencias */
+    margin: 0 auto; /* Esto centrará el contenedor en la pantalla */
+    padding: 0 20px; /* Esto agrega un pequeño relleno a los lados para evitar que el contenido toque los bordes de la ventana del navegador en pantallas pequeñas */
+}
+
+
+body {
     font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    color: #333;
+    line-height: 1.5;
+    background-color: #f4f4f4;
 }
 
-body{
-    background-color: #fcfcfa;
-    max-width: 100%;
-    
+.container, .container2, .seccion {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    overflow: hidden;
 }
 
-.container{
-    margin-bottom: 50px;
-      
-}
-
-.second{
-    background-color:#009846;
-    width:100%;
-    height: 22px;
-    
-}
-
-.fa-house{
-    color:#dcdcdc;
-   margin: auto; 
-}
-.container2{
-    margin-left:30px;
-    margin-right: 30px;
-    margin-top: 50px;
-   
-}
-
-.paragraph{
-    text-align:justify;
-    margin-top: 20px;
-    font-family: 'Roboto', sans-serif;
-    margin-left:30px;
-    margin-right: 30px;
-    
-    
-}
-
-.title{
-    color: #ffff;
-    background-color: #272727;
-    font-weight: bold;
-    font-size: 3em;
-    text-transform: uppercase;
-    display: flex;
-    justify-content: center;
+header {
+    background-image: linear-gradient(to right, #2E8B57, #3CB371, #20B2AA);
+    padding: 20px 0;
     text-align: center;
+    color: #fff;
 }
 
-.title2{
-    color: #ffff;
-    font-weight: bold;
-    font-size: 1.5em;
+
+.title {
+    font-family: 'League Spartan', sans-serif;
+    font-size: 2rem;
+    margin-bottom: 10px;
 }
 
-div > img{
+.second {
+    font-size: 3rem;
+}
+
+.paragraph {
+    margin: 20px 0;
+    background-color: #fff;
+    padding: 20px;
     border-radius: 8px;
+    font-size: 1rem;
+    font-family: 'Raleway', sans-serif;
+}
+
+.container2 {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.container2 img {
     width: 100%;
     height: auto;
-    box-shadow: 0px 0px 5px #000;
-    width: 200px;
-    height: 200px;
+    border-radius: 8px;
+    transition: transform 0.3s;
 }
 
-div{
-    display: grid;
-    grid-template-columns: 
-        repeat(
-            auto-fit,
-            minmax(180px, 1fr)
-        );
-    gap: 32px;
+.container2 img:hover {
+    transform: scale(1.05);
 }
 
-.seccion{
-    width: 100%;
-    margin: 0px;
-    padding: 20px;
-    background-color: #BEADFA;
-    margin-bottom: 40px;
-    margin-top: 40px;
-   
-    display: flex;
-    justify-content: center;
+.title2 {
+    font-size: 2rem; /* Aumentamos el tamaño de la fuente */
+    margin: 30px 0; /* Aumentamos el margen para darle más espacio */
     text-align: center;
-    
+    background: linear-gradient(145deg, #2E8B57, #20B2AA); /* Agregamos un degradado en tonos verdes */
+    color: #fff; /* Cambiamos el color del texto a blanco */
+    padding: 10px 20px; /* Añadimos padding para darle más espacio */
+    border-radius: 8px; /* Redondeamos los bordes */
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2); /* Añadimos una sombra para darle profundidad */
 }
 
-@media(max-width:450px){
-    div{
-        display: flex;
-        flex-direction: column;
-    }
-
-    div > img{
-       
-        width: 300px;
-        height: 300px;
-        margin-left: 40px;
-        
+/* Responsive */
+@media (max-width: 768px) {
+    .title2 {
+        font-size: 1.5rem; /* Reducimos el tamaño de la fuente para dispositivos más pequeños */
     }
 }
 
-@media(max-width:420px){
-   
-    div > img{
-       
-        width: 300px;
-        height: 300px;
-        
-        margin-left: 25px;
-        
+
+/* Responsive */
+@media (max-width: 768px) {
+    .title {
+        font-size: 1.5rem;
+    }
+
+    .second {
+        font-size: 2rem;
+    }
+
+    .paragraph {
+        font-size: 0.9rem;
     }
 }
 
-    @media(max-width:360px){
-        div > img{
-           
-            justify-content: center;
-            align-content: center;
-            width: 250px;
-            height: 250px;
-            
-        }  
+
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
+
+.icon-container {
+    font-size: 3rem;
+    margin-right: 20px;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    font-size: 0.9rem;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.footer-content a {
+    color: #20B2AA;
+    text-decoration: none;
+}
+
+.footer-content a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .footer-content {
+        font-size: 0.8rem;
+    }
+}
+
+
+.fab {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: inline-flex; /* Cambiado a inline-flex */
+    align-items: center;
+    justify-content: center;
+    padding: 10px 20px; /* Añadido padding para dar espacio alrededor del texto */
+    background-color: #20B2AA;
+    color: #fff;
+    font-size: 1rem;
+    border-radius: 25px; /* Bordes redondeados */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    text-decoration: none;
+    transition: transform 0.3s, background-color 0.3s;
+}
+
+.fab:hover {
+    transform: translateY(-5px);
+    background-color: #2E8B57;
+}
+/* Lightbox Styles */
+.lightbox {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    align-items: center;
+    justify-content: center;
+}
+
+.lightbox img {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 8px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+}
+
+.lightbox-close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 2rem;
+    color: #fff;
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+    padding: 5px;
+    line-height: 1;
+}
+
 
 
 
