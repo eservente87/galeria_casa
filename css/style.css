@@ -65,6 +65,18 @@ header {
     height: auto;
     border-radius: 8px;
     transition: transform 0.3s;
+    width: 215px;
+    height: 215px;
+}
+
+@media(max-width: 438px){
+    .container2 img {
+        width: 100%;
+        height: auto;
+        border-radius: 8px;
+        transition: transform 0.3s;
+        
+    }
 }
 
 .container2 img:hover {
